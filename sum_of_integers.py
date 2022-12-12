@@ -8,33 +8,24 @@
 def main():
     # This program calculates the positive an negative integer sum
 
-    # Input
-    positive_string = input("Enter an integer >= 0: ")
-    negative_string = input ("Enter a integer < 0 ")
-    positive_string2 = input("Enter an integer >= 0: ")
-    negative_string2 = input ("Enter a integer < 0 ")
-
-    # process
-    sum1 = positive_string + positive_string2
-    sum2 = negative_string + negative_string2
-
-    # output
+    #  process & output
+    repeat = 0
+    positive_answer = 0
+    negative_answer = 0
     try:
-        positive_integer = int(positive_string)
-        positive_integer2 = int(positive_string2)
-        negative_integer = int(negative_string)
-        negative_integer2 = int(negative_string2)
-        if positive_integer and positive_integer2 >= 0:
-            print("The sum of all positve number =")
-            if positive_integer >= 0:
-                for loop_counter in range(positive_integer + 1):
-                    squared_number = loop_counter * loop_counter
-                    print("{0}² = {1}".format(loop_counter, squared_number))
+        while repeat < 4:
+            repeat = repeat + 1
+            input_number = input("Enter an integer: ")
+            input_number_int = int(input_number)
+            if input_number_int >= 0:
+                positive_answer = positive_answer + input_number_int
+            if input_number_int < 0:
+                negative_answer = negative_answer + input_number_int
+        print("\nnegative sum {0}, positive sum {1}.".format(positive_answer, negative_answer))
     except ValueError:
-        print("This is invalid input.")
+            print("\nThis is invalid input.")
     finally:
         print("\nDone.")
-
 
 
 if __name__ == "__main__":
