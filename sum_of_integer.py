@@ -21,9 +21,13 @@ def main():
                 positive_answer = positive_answer + input_number_int
             if input_number_int < 0:
                 negative_answer = negative_answer + input_number_int
-        print("\nThe negative sum is {1}, The positive sum is {0}.".format(positive_answer, negative_answer))
+        print(
+            "\nThe negative sum is {1}, The positive sum is {0}.".format(
+                positive_answer, negative_answer
+            )
+        )
     except ValueError:
-            print("\n\nThis is invalid input.")
+        print("\n\nThis is invalid input.")
     finally:
         print("\nDone.")
 
